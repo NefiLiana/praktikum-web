@@ -3,7 +3,6 @@ defined('_VALID') or die ('not allowed');
 //Pemanggilan session
 session_start();
 function init_login(){
-    //Simulasi data account nama dan password
     $nama = 'admin';
     $pass = 'rahasia';  
 
@@ -12,7 +11,6 @@ function init_login(){
         $p = trim($_POST['pass']);
 
         if(($n===$nama) && ($p ===$pass)){          
-			// Jika sama, set session
             if(!isset($_SESSION['nlogin']) || !isset($_SESSION['time'])){
                 $_SESSION['nlogin'] = $n;
                 $_SESSION['time'] = time();
